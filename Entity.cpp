@@ -48,7 +48,7 @@ bool Entity::GoUp(sf::Time elapsedTime)
 }
 
 bool Entity::GoDown(sf::Time elapsedTime)
-{
+{	
 	if (this->IsAboveOrOnLadder())
 	{
 		sf::Vector2f movement(0.f, 0.f);
@@ -85,8 +85,8 @@ bool Entity::IsAboveOrOnLadder()
 	for (std::shared_ptr<Entity> entity : LevelFactory::getCurrentLevel()->mLadders)
 	{
 		sf::FloatRect fr = entity->mBody.getGlobalBounds();
-		fr.top -= this->mBody.getTexture()->getSize().y + 10;
-		fr.height += 13;
+		fr.top -= this->mBody.getTexture()->getSize().y + 12;
+		fr.height += 15;
 		if (this->mBody.getGlobalBounds().intersects(fr))
 		{
 			return true;

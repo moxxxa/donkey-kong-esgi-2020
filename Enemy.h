@@ -17,8 +17,8 @@ private:
 private:
 	bool goombaUp = false;
 	bool goombaDown = false;
-	int upDownFramer = 0;
-	int countWalks = 0;
+	int  upDownFramer = 0;
+	int  countWalks = 0;
 
 protected: 
 	std::string goombaLeftFoot = "Media/Textures/goomba-left-foot.png"; 
